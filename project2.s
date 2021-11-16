@@ -14,3 +14,7 @@ main: 									#Main Section Starts
 	li $t9, 0 							#This register will be used for len of final string
 lead:
 	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
+	beq $t3, $zero, end_program
+	la $a0, final_string
+	lbu $t1, input($t0)					#Load byte from input into t1 register
+	
