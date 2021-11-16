@@ -18,3 +18,7 @@ lead:
 	la $a0, final_string
 	lbu $t1, input($t0)					#Load byte from input into t1 register
 	
+	addi $t8, $zero, 32					#Temporarily holds the space character
+	beq $t8, $t1, bad_lead_char			#Test to see if lead byte is a space char
+	addi $t8, $zero, 9					#Temporarily holds the tab character
+	beq $t8, $t1, bad_lead_char			#Test to see if lead byte is a tab char
