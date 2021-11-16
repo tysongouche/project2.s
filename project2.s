@@ -9,3 +9,8 @@ main: 									#Main Section Starts
 	li $v0, 8							#Load Read input command
 	la $a0, input						#Mem Address from input is now destination MA
 	syscall
+
+	li $t0, 0							#This register will be used for byte addressing
+	li $t9, 0 							#This register will be used for len of final string
+lead:
+	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
