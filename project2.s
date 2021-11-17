@@ -196,3 +196,5 @@ int_test:
 	slti $t4, $t1, 58					
 	add $t4, $t4, $t3
 	addi $t3, $zero, 1 
+	bne $t4, $t3, end_program
+	j int_back
