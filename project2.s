@@ -205,3 +205,7 @@ add_byte:
 	addi $t0, $t0, 1   					#Increase current byet offset by 1
 	j F_ADDER_LOOP
 
+bad_lead_char:
+	addi $t0, $t0, 1   					#Increase current byet offset by 1
+	j lead
+
