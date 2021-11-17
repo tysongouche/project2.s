@@ -136,3 +136,8 @@ lhere2:
 	add $v0, $v0, $s0
 	add $v0, $v0, $s1
 	
+	addi $t9, $t9, -1 					#Increase byte addr offset by 1
+	lbu $t7, final_string($t9)			#load 3rd byte from final string
+	slti $t3, $t7, 65					#Test for uppercase 
+	slti $t4, $t7, 91					
+	add $t4, $t4, $t3
