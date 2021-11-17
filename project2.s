@@ -214,3 +214,8 @@ spaceTab_test:
 	beq $t3, $zero, end_program
 	addi $t8, $zero, 9 					#Final Test for tab
 	beq $t2, $t8, sub_program			
+	addi $t8, $zero, 32 				#Final Test for space
+	beq $t2, $t8, sub_program			
+	addi $t8, $zero, 10 				#Final Test for \n
+	beq $t2, $t8, sub_program			
+	j end_program						#If it reaches here, byte was illegal
