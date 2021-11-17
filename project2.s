@@ -224,3 +224,6 @@ end_program:
 	li $v0, 4
 	la $a0, error						#Print "Not recognized"
 	syscall
+	li $v0, 10    						#End program
+	syscall
+	
