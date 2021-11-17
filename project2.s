@@ -119,3 +119,8 @@ lhere1:
 	slti $t3, $t6, 65					#Test for uppercase 
 	slti $t4, $t6, 91					
 	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, uppercase2
+	slti $t3, $t6, 97					#Test for lowercase
+	slti $t4, $t6, 123					
+	add $t4, $t4, $t3
