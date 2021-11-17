@@ -209,3 +209,8 @@ bad_lead_char:
 	addi $t0, $t0, 1   					#Increase current byet offset by 1
 	j lead
 
+spaceTab_test:
+	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
+	beq $t3, $zero, end_program
+	addi $t8, $zero, 9 					#Final Test for tab
+	beq $t2, $t8, sub_program			
