@@ -51,3 +51,8 @@ F_ADDER_LOOP:
 	addi $t8, $zero, 10   				#t8 temporarily holds the \n ascii code
  	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program
 	addi $t8, $zero, 32					#Temporarily holds the space character
+	beq $t8, $t1, spaceTab_test			#Test to see if byte is a trailing space/tab
+	addi $t8, $zero, 9					#Temporarily holds the tab character
+	beq $t8, $t1, spaceTab_test			#Test to see if byte is a trailing space/tab
+	slti $t3, $t1, 48					#Test if ascii value of current byte is < 0's ascii code
+	bne $t3, $zero, end_program
