@@ -250,3 +250,7 @@ uppercase1:								#Modify Letters
 lowercase1:
 	addi $t5, $t5, -87
 	j lhere1
+
+uppercase2:								
+	addi $t6, $t6, -55
+	j uhere2
