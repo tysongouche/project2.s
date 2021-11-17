@@ -227,3 +227,7 @@ end_program:
 	li $v0, 10    						#End program
 	syscall
 	
+modify1:								#modify numbers
+	addi $t5, $t5, -48
+	j here1
+	
