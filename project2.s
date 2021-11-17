@@ -109,3 +109,7 @@ here1:
 uhere1:
 lhere1:
 	mult $a0, $t5						#convert it to hex
+	mflo $s0
+	mfhi $s1
+	add $v0, $zero, $s0
+	add $v0, $v0, $s1
