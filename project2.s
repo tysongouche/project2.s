@@ -151,3 +151,8 @@ lhere2:
 	bne $t7, $zero, modify3				#Convert byte into its true value
 here3:
 uhere3:
+lhere3:
+	mult $a2, $t7						#convert it to hex
+	mflo $s0
+	mfhi $s1
+	add $v0, $v0, $s0
