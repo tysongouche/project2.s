@@ -94,3 +94,8 @@ sub_program:
 	addi $t9, $t9, -1 					#Set byte addr offset back to 0
 	lbu $t5, final_string($t9)			#load first byte from final string	
 	
+	slti $t3, $t5, 65					#Test for uppercase 
+	slti $t4, $t5, 91					
+	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, uppercase1
