@@ -84,3 +84,8 @@ sub_print:
 	syscall
 
 	
+sub_program:
+	beq $t9, $zero, end_program
+	addi $a0, $zero, 1 					#Giving A registers proper calculation values
+	addi $a1, $zero, 35					#Giving A registers proper calculation values
+	addi $a2, $zero, 1225				#Giving A registers proper calculation values
