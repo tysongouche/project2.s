@@ -168,3 +168,8 @@ lhere3:
 	slti $t3, $t8, 97					#Test for lowercase
 	slti $t4, $t8, 123					
 	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, lowercase4	
+	bne $t8, $zero, modify4				#Convert byte into its true value
+here4:
+uhere4:
