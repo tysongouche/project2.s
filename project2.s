@@ -267,3 +267,8 @@ lowercase3:
 	addi $t7, $t7, -87
 	j lhere3
 	
+uppercase4:								
+	addi $t8, $t8, -55
+	j uhere4
+	
+	
