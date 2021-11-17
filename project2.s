@@ -263,3 +263,7 @@ uppercase3:
 	addi $t7, $t7, -55
 	j uhere3
 	
+lowercase3:
+	addi $t7, $t7, -87
+	j lhere3
+	
