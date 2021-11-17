@@ -37,3 +37,7 @@ F_ADDER_LOOP:
 	addi $t0, $t0, 1     				#TEMP Increase offset by 1 to hold next byte
 	lbu $t2, input($t0)					#Load next byte	
 	addi $t0, $t0, -1					#Set byte offset back to what it was
+	addi $t8, $zero, 32 				#Test for trailing space
+	beq $t1, $t8, spaceTab_test
+	addi $t8, $zero, 9 					#Test for trailing tab
+	beq $t1, $t8, spaceTab_test
