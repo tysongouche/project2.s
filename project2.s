@@ -113,3 +113,9 @@ lhere1:
 	mfhi $s1
 	add $v0, $zero, $s0
 	add $v0, $v0, $s1
+
+	addi $t9, $t9, -1 					#Increase byte addr offset by 1
+	lbu $t6, final_string($t9)			#load 2nd byte from final string
+	slti $t3, $t6, 65					#Test for uppercase 
+	slti $t4, $t6, 91					
+	add $t4, $t4, $t3
