@@ -41,3 +41,8 @@ F_ADDER_LOOP:
 	beq $t1, $t8, spaceTab_test
 	addi $t8, $zero, 9 					#Test for trailing tab
 	beq $t1, $t8, spaceTab_test
+	addi $t3, $zero, 90					#Test for Z (illegal letter)
+	beq $t3, $t1, end_program			
+	addi $t3, $zero, 122				#Test for z (illegal letter)
+	beq $t3, $t1, end_program
+	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
