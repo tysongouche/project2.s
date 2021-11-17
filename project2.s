@@ -81,3 +81,4 @@ sub_print:
 	li $v0, 1
 	syscall
 	li $v0, 10    						#End program
+	syscall
