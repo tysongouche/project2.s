@@ -242,3 +242,8 @@ modify3:
 modify4:
 	addi $t8, $t8, -48
 	j here4
+
+uppercase1:								#Modify Letters
+	addi $t5, $t5, -55
+	j uhere1
+	
