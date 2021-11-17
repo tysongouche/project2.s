@@ -191,3 +191,8 @@ lhere4:
 
 
 #Branch Destinations
+int_test: 
+	slti $t3, $t1, 48					#Test for number 
+	slti $t4, $t1, 58					
+	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
