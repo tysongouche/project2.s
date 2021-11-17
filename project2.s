@@ -58,3 +58,8 @@ F_ADDER_LOOP:
 	bne $t3, $zero, end_program
 	addi $t3, $zero, 255				#<255 test
 	beq $t1, $t3, end_program 
+	slti $t3, $t1, 58					#Test 1 
+	slti $t4, $t1, 65					#Test 1
+	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, end_program
