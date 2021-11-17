@@ -254,3 +254,8 @@ lowercase1:
 uppercase2:								
 	addi $t6, $t6, -55
 	j uhere2
+
+lowercase2:
+	addi $t6, $t6, -87
+	j lhere2
+	
