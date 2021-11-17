@@ -238,3 +238,7 @@ modify2:
 modify3:
 	addi $t7, $t7, -48
 	j here3
+
+modify4:
+	addi $t8, $t8, -48
+	j here4
