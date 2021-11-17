@@ -74,3 +74,5 @@ F_ADDER_LOOP:
 	addi $t3, $zero, 1 
 	beq $t4, $t3, end_program
 	j add_byte						#Good bytes reach here
+	
+	
