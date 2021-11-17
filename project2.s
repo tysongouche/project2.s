@@ -27,3 +27,7 @@ lead:
 	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program	
 	addi $t8, $zero, 64
 	ble $t1, $t8, int_test				#Int test 
+int_back:
+	sb $t1, final_string($t9)			#if byte reaches here, save it to the final string
+	addi $t9, $t9, 1 					#Increase len count of final string by 1
+	addi $t0, $t0, 1   					#Increase current byet offset by 1
