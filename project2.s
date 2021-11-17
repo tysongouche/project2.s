@@ -104,3 +104,8 @@ sub_program:
 	add $t4, $t4, $t3
 	addi $t3, $zero, 1 
 	beq $t4, $t3, lowercase1
+	bne $t5, $zero, modify1				#Test for integer
+here1:
+uhere1:
+lhere1:
+	mult $a0, $t5						#convert it to hex
