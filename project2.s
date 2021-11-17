@@ -22,3 +22,8 @@ lead:
 	beq $t8, $t1, bad_lead_char			#Test to see if lead byte is a space char
 	addi $t8, $zero, 9					#Temporarily holds the tab character
 	beq $t8, $t1, bad_lead_char			#Test to see if lead byte is a tab char
+
+	addi $t8, $zero, 10   				#t8 temporarily holds the \n ascii code
+	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program	
+	addi $t8, $zero, 64
+	ble $t1, $t8, int_test				#Int test 
