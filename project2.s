@@ -234,3 +234,7 @@ modify1:								#modify numbers
 modify2:
 	addi $t6, $t6, -48
 	j here2
+
+modify3:
+	addi $t7, $t7, -48
+	j here3
