@@ -99,3 +99,8 @@ sub_program:
 	add $t4, $t4, $t3
 	addi $t3, $zero, 1 
 	beq $t4, $t3, uppercase1
+	slti $t3, $t5, 97					#Test for lowercase
+	slti $t4, $t5, 123					
+	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, lowercase1
