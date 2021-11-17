@@ -188,3 +188,6 @@ lhere4:
 	
 	add $v1, $zero, $v0					#Put answer in v1
 	j sub_print
+
+
+#Branch Destinations
