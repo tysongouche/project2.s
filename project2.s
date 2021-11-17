@@ -124,3 +124,8 @@ lhere1:
 	slti $t3, $t6, 97					#Test for lowercase
 	slti $t4, $t6, 123					
 	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, lowercase2
+	bne $t6, $zero, modify2				#Test for integer
+here2:
+uhere2:
