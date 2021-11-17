@@ -219,3 +219,8 @@ spaceTab_test:
 	addi $t8, $zero, 10 				#Final Test for \n
 	beq $t2, $t8, sub_program			
 	j end_program						#If it reaches here, byte was illegal
+
+end_program:
+	li $v0, 4
+	la $a0, error						#Print "Not recognized"
+	syscall
