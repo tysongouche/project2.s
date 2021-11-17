@@ -76,3 +76,8 @@ F_ADDER_LOOP:
 	j add_byte						#Good bytes reach here
 	
 	
+sub_print:
+	add $a0, $zero, $v1
+	li $v0, 1
+	syscall
+	li $v0, 10    						#End program
