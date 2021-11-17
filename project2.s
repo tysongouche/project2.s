@@ -31,3 +31,9 @@ int_back:
 	sb $t1, final_string($t9)			#if byte reaches here, save it to the final string
 	addi $t9, $t9, 1 					#Increase len count of final string by 1
 	addi $t0, $t0, 1   					#Increase current byet offset by 1
+
+F_ADDER_LOOP: 
+	lbu $t1, input($t0) 				#Load new current byte
+	addi $t0, $t0, 1     				#TEMP Increase offset by 1 to hold next byte
+	lbu $t2, input($t0)					#Load next byte	
+	addi $t0, $t0, -1					#Set byte offset back to what it was
