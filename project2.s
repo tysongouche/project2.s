@@ -198,3 +198,9 @@ int_test:
 	addi $t3, $zero, 1 
 	bne $t4, $t3, end_program
 	j int_back
+
+add_byte:
+	sb $t1, final_string($t9)				#Save byte to final string
+	addi $t9, $t9, 1 					#Increase len count of final string by 1
+	addi $t0, $t0, 1   					#Increase current byet offset by 1
+	j F_ADDER_LOOP
