@@ -178,3 +178,8 @@ lhere4:
 	mflo $s0
 	mfhi $s1
 	add $v0, $v0, $s0
+	add $v0, $v0, $s1
+	addi $a3, $zero, 10108
+	mult $a3, $t8						#second half of too big number
+	mflo $s0
+	mfhi $s1
