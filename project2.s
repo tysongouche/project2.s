@@ -46,3 +46,8 @@ F_ADDER_LOOP:
 	addi $t3, $zero, 122				#Test for z (illegal letter)
 	beq $t3, $t1, end_program
 	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
+	beq $t3, $zero, end_program
+	beq $t1, $zero, sub_program			#If current byte is null, go to sub program
+	addi $t8, $zero, 10   				#t8 temporarily holds the \n ascii code
+ 	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program
+	addi $t8, $zero, 32					#Temporarily holds the space character
