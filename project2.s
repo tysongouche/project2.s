@@ -63,3 +63,8 @@ F_ADDER_LOOP:
 	add $t4, $t4, $t3
 	addi $t3, $zero, 1 
 	beq $t4, $t3, end_program
+	slti $t3, $t1, 91					#Test 2 
+	slti $t4, $t1, 97					#Test 2
+	add $t4, $t4, $t3
+	addi $t3, $zero, 1 
+	beq $t4, $t3, end_program
