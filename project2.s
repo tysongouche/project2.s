@@ -129,3 +129,8 @@ lhere1:
 	bne $t6, $zero, modify2				#Test for integer
 here2:
 uhere2:
+lhere2:
+	mult $a1, $t6						#convert it to hex
+	mflo $s0
+	mfhi $s1
+	add $v0, $v0, $s0
