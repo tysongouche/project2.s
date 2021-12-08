@@ -83,7 +83,9 @@ sub_print:
 	li $v0, 10    						#End program
 	syscall
 
-	
+
+subprogram1:
+
 sub_program:
 	beq $t9, $zero, end_program
 	addi $a0, $zero, 1 					#Giving A registers proper calculation values
