@@ -89,7 +89,8 @@ subprogram1:
 	addi $a1, $zero, 35					#Giving A registers proper calculation values
 	addi $a2, $zero, 1225					#Giving A registers proper calculation values
 	addi $a3, $zero, 32767					#Giving A registers proper calculation values
-		
+	jal sub_program
+	j sub_print	
 
 sub_program:
 	beq $t9, $zero, end_program
@@ -224,7 +225,7 @@ spaceTab_test:
 	beq $t2, $t8, sub_program			
 	addi $t8, $zero, 10 				#Final Test for \n
 	beq $t2, $t8, sub_program			
-	j end_program						#If it reaches here, byte was illegal
+	jr $ra						#If it reaches here, byte was illegal
 
 end_program:
 	li $v0, 4
