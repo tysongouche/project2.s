@@ -85,16 +85,18 @@ sub_print:
 
 
 subprogram1:
+	addi $a0, $zero, 1 					#Giving A registers proper calculation values
+	addi $a1, $zero, 35					#Giving A registers proper calculation values	
 
 sub_program:
 	beq $t9, $zero, end_program
 	addi $a0, $zero, 1 					#Giving A registers proper calculation values
 	addi $a1, $zero, 35					#Giving A registers proper calculation values
-	addi $a2, $zero, 1225				#Giving A registers proper calculation values
-	addi $a3, $zero, 32767				#Giving A registers proper calculation values
+	addi $a2, $zero, 1225					#Giving A registers proper calculation values
+	addi $a3, $zero, 32767					#Giving A registers proper calculation values
 		
 	addi $t9, $t9, -1 					#Set byte addr offset back to 0
-	lbu $t5, final_string($t9)			#load first byte from final string	
+	lbu $t5, final_string($t9)				#load first byte from final string	
 	
 	slti $t3, $t5, 65					#Test for uppercase 
 	slti $t4, $t5, 91					
