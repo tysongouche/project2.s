@@ -194,7 +194,7 @@ lhere4:
 	add $v0, $v0, $s1
 	
 	add $v1, $zero, $v0					#Put answer in v1
-	j sub_print
+	jr $ra
 
 
 #Branch Destinations
@@ -224,8 +224,8 @@ spaceTab_test:
 	addi $t8, $zero, 32 				#Final Test for space
 	beq $t2, $t8, sub_program1			
 	addi $t8, $zero, 10 				#Final Test for \n
-	beq $t2, $t8, sub_program			
-	jr $ra						#If it reaches here, byte was illegal
+	beq $t2, $t8, sub_program1			
+	j end_program					#If it reaches here, byte was illegal
 
 end_program:
 	li $v0, 4
