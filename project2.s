@@ -84,7 +84,7 @@ sub_print:
 	syscall
 
 
-subprogram1:
+sub_program1:
 	addi $a0, $zero, 1 					#Giving A registers proper calculation values
 	addi $a1, $zero, 35					#Giving A registers proper calculation values
 	addi $a2, $zero, 1225					#Giving A registers proper calculation values
