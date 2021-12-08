@@ -24,7 +24,7 @@ lead:
 	beq $t8, $t1, bad_lead_char			#Test to see if lead byte is a tab char
 
 	addi $t8, $zero, 10   				#t8 temporarily holds the \n ascii code
-	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program	
+	beq $t1, $t8, sub_program1			#If current byte is \n, go to sub program	
 	addi $t8, $zero, 64
 	ble $t1, $t8, int_test				#Int test 
 int_back:
@@ -47,9 +47,9 @@ F_ADDER_LOOP:
 	beq $t3, $t1, end_program
 	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
 	beq $t3, $zero, end_program
-	beq $t1, $zero, sub_program			#If current byte is null, go to sub program
+	beq $t1, $zero, sub_program1			#If current byte is null, go to sub program
 	addi $t8, $zero, 10   				#t8 temporarily holds the \n ascii code
- 	beq $t1, $t8, sub_program			#If current byte is \n, go to sub program
+ 	beq $t1, $t8, sub_program1			#If current byte is \n, go to sub program
 	addi $t8, $zero, 32					#Temporarily holds the space character
 	beq $t8, $t1, spaceTab_test			#Test to see if byte is a trailing space/tab
 	addi $t8, $zero, 9					#Temporarily holds the tab character
@@ -220,9 +220,9 @@ spaceTab_test:
 	slti $t3, $t9, 5  					#Test to see if len of final string is < 5
 	beq $t3, $zero, end_program
 	addi $t8, $zero, 9 					#Final Test for tab
-	beq $t2, $t8, sub_program			
+	beq $t2, $t8, sub_program1			
 	addi $t8, $zero, 32 				#Final Test for space
-	beq $t2, $t8, sub_program			
+	beq $t2, $t8, sub_program1			
 	addi $t8, $zero, 10 				#Final Test for \n
 	beq $t2, $t8, sub_program			
 	jr $ra						#If it reaches here, byte was illegal
